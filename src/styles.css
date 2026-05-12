@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-slate-900;
+    background:
+      radial-gradient(circle at top left, rgba(99, 102, 241, 0.16), transparent 28%),
+      radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 24%),
+      linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2.5 bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-600 text-white rounded-xl font-semibold hover:from-indigo-700 hover:via-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-lg shadow-indigo-200/50 hover:shadow-xl hover:shadow-indigo-300/60 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white/90 border border-slate-200 text-slate-700 rounded-xl font-medium hover:bg-white transition-all duration-200 shadow-sm;
+  }
+
+  .card {
+    @apply bg-white/95 backdrop-blur rounded-2xl border border-slate-200/80 shadow-lg shadow-slate-200/50 hover:shadow-xl transition-all duration-200;
+  }
+}
